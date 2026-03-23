@@ -30,6 +30,10 @@ on:
         description: "Provide instance type"
         required: true
         type: choice
+        options:
+        - t3.micro
+        - t3.medium
+        - t3.small
 
 jobs:
   build:
