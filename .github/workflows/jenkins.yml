@@ -43,7 +43,7 @@ jobs:
       - name: Git clone
         uses: actions/checkout@v4
         with:
-          repository: "Adilet-312/jenkins-terraform.git"
+          repository: "Adilet-312/jenkins-terraform"
           token: '${{ secrets.TOKEN }}'
 
       - name: Create tfvars file
