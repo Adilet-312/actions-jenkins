@@ -38,6 +38,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: "${{ inputs.region }}"
 
     steps:
       - name: Git clone
@@ -48,7 +49,7 @@ jobs:
 
       - name: Create tfvars file
         run: |
-          echo "${{ vars.TFVARS }}" > terraform.tfvars
+          echo "${{ secrets.TFVARS }}" > terraform.tfvars
 
       - name: Terraform Install
         uses: hashicorp/setup-terraform@v4
